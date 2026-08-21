@@ -16,11 +16,7 @@ struct ClaudeAwakeApp: App {
         MenuBarExtra {
             PanelView(monitor: monitor)
         } label: {
-            //Image dans le MenuBar
-            let renderer = ImageRenderer(content: SignalIcon(state: monitor.state))
-            if let nsImage = renderer.nsImage {
-                Image(nsImage: nsImage)
-            }
+            MenuBarIcon(state: monitor.state)
         }
         .menuBarExtraStyle(.window)
 
@@ -30,6 +26,29 @@ struct ClaudeAwakeApp: App {
         }
         .windowResizability(.contentSize)
         
+    }
+    
+
+// MARK: - Icône
+    
+    ///On convertit le dessin SwiftUi en une image pour l'icône
+    struct MenuBarIcon: View {
+
+        let state: MonitorState
+
+        var body: some View {
+            if let image = rendered {
+                Image(nsImage: image)
+            }
+        }
+
+        private var rendered: NSImage? {
+            let renderer = ImageRenderer(content: SignalIcon(state: state))
+            renderer.scale = NSScreen.main?.backingScaleFactor ?? 2
+            let image = renderer.nsImage
+            image?.isTemplate = true
+            return image
+        }
     }
 }
 
