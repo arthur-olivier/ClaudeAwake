@@ -17,7 +17,7 @@ extension MonitorState {
         switch self {
         case .idle:               return "Inactif"
         case .waitingForActivity: return "En attente"
-        case .chromeWorking:      return "Chrome travaille"
+        case .chromeWorking:      return "Claude in Chrome travaille"
         }
     }
 
