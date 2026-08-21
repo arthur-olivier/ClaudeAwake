@@ -10,7 +10,7 @@ Garde le Mac éveillé pendant les tâches Claude in Chrome, et l'endort quand c
 
 Décompressez, glissez dans Applications, lancez.
 
-À savoir que l'app n'est pas signée, donc elle sera marquée comme endommagée.
+À savoir que l'app n'est pas signée, donc elle sera marquée comme endommagée (Réglages Système → Confidentialité et sécurité -> "ClaudeAwake" .... -> Ouvrir quand même).
 
 ## Utilisation
 
