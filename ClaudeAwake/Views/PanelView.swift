@@ -107,7 +107,7 @@ struct PanelView: View {
         Button {
             monitor.toggle()
         } label: {
-            Text(monitor.state.isArmed ? "Desarmer" : "Armer")
+            Text(monitor.state.isArmed ? "Désarmer" : "Armer")
                 .frame(maxWidth: .infinity)
         }
         .buttonStyle(.bordered)
@@ -134,7 +134,7 @@ struct PanelView: View {
             Divider().padding(.vertical, 10)
 
             HStack {
-                Text("Delai de fin")
+                Text("Délai de fin")
                     .font(.caption)
                     .foregroundStyle(.secondary)
                 Spacer()
@@ -149,7 +149,7 @@ struct PanelView: View {
             }
 
             HStack {
-                Text("Endormir a la fin")
+                Text("Endormir à la fin")
                     .font(.caption)
                     .foregroundStyle(.secondary)
                 Spacer()
@@ -166,7 +166,7 @@ struct PanelView: View {
     private var actionsSection: some View {
         VStack(alignment: .leading, spacing: 0) {
             Divider().padding(.vertical, 8)
-            actionRow("A propos") {
+            actionRow("À propos") {
                 openWindow(id: "about")
                 NSApplication.shared.activate(ignoringOtherApps: true)
             }

@@ -158,7 +158,7 @@ final class ChromeMonitor: ObservableObject {
             guard let firstActivityAt else { return nil }
             let timeFormatter = DateFormatter()
             timeFormatter.dateFormat = "HH:mm"
-            return "Demarre a \(timeFormatter.string(from: firstActivityAt)) · \(activityCount) pics"
+            return "Démarré à \(timeFormatter.string(from: firstActivityAt)) · \(activityCount) pics"
         }
     }
 }

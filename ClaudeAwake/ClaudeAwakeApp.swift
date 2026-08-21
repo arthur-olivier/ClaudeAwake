@@ -25,7 +25,7 @@ struct ClaudeAwakeApp: App {
         .menuBarExtraStyle(.window)
 
         /// Fenêtre About
-        Window("A propos de ClaudeAwake", id: "about") {
+        Window("À propos de ClaudeAwake", id: "about") {
             AboutView()
         }
         .windowResizability(.contentSize)

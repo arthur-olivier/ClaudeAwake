@@ -24,7 +24,7 @@ extension MonitorState {
     var subtitle: String? {
         switch self {
         case .idle:               return nil
-        case .waitingForActivity: return "Aucune activite detectee"
+        case .waitingForActivity: return "Aucune activité détectée"
         case .chromeWorking:      return "Veille suspendue"
         }
     }
